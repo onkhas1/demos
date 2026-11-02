@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://onkhas1.github.io/demos/kati-pet/">
+<meta property="og:image" content="https://onkhas1.github.io/demos/kati-pet/img/og.jpg">
+<meta property="og:title" content="Кэти Пэт — груминг в Барнауле">
+<meta property="og:description" content="Собаки и кошки, от 1 400 ₽. Цены по породам на сайте.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23dafa9c'/%3E%3C/svg%3E">
+<title>Кэти Пэт — груминг в Барнауле</title>
+<meta name="description" content="Груминг собак и кошек в Барнауле, переулок Ядринцева, 95. Цены по породам от 1 400 ₽. 5,0 в 2ГИС, 515 отзывов.">
+<link rel="preload" as="image" href="img/pom.webp">
+<link rel="preload" as="font" type="font/woff2" href="fonts/manrope-cyrillic.woff2" crossorigin>
+<style>
+@font-face{font-family:Manrope;font-weight:200 800;font-display:swap;src:url(fonts/manrope-cyrillic.woff2) format("woff2");unicode-range:U+0400-04FF,U+2116}
+@font-face{font-family:Manrope;font-weight:200 800;font-display:swap;src:url(fonts/manrope-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20BD}
+:root{--bg:#0f0f0f;--surface:#1a1a1a;--ink:#fff;--muted:#a8a8a8;--accent:#dafa9c;--accent-ink:#0f0f0f;--paper:#fff;--tone:#f1f3ec;--m:clamp(16px,3vw,48px);--small:clamp(.875rem,.84rem + .1vw,.9375rem);--body:clamp(1.0625rem,1rem + .25vw,1.1875rem);--lead:clamp(1.25rem,1.1rem + .7vw,1.625rem);--head:clamp(2rem,1.3rem + 3.2vw,4rem);--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;scrollbar-color:#3a3a3a var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/1.5 Manrope,system-ui,sans-serif;overflow-x:clip;font-variant-numeric:tabular-nums}
+::selection{background:var(--accent);color:var(--accent-ink)}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.22em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.light :focus-visible{outline-color:#0f0f0f}
+h1,h2,h3{font-weight:600;letter-spacing:-.03em;margin:0;text-wrap:balance}
+h2{font-size:var(--head);line-height:1.05}
+.bar{position:sticky;top:0;z-index:20;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px var(--m)}
+.mark{font-size:1.25rem;font-weight:700;letter-spacing:-.03em;text-decoration:none}
+.bar nav{display:flex;gap:clamp(16px,2.4vw,36px)}
+.bar nav a{text-decoration:none;font-weight:500}
+.bar nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border:0;font-family:inherit;font-size:inherit;cursor:pointer;transition:transform .35s var(--ease),background-color .2s}
+.btn:hover{transform:translateY(-3px);background:#e9ffb9}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn.small{min-height:44px;padding:0 20px}
+.btn.alt{background:var(--surface);color:var(--ink)}
+.btn.alt:hover{background:#2b2b2b}
+.hero{position:relative;min-height:calc(100svh - 68px);overflow:hidden;padding:clamp(48px,11vh,120px) var(--m) clamp(32px,6vh,64px);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.hero .copy{position:relative;z-index:2;max-width:50%}
+h1{font-size:clamp(2.75rem,6.8vw,6.6rem);line-height:1.02}
+.sub{font-size:var(--lead);line-height:1.35;margin:clamp(24px,4vh,40px) 0 0;max-width:27ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,4vh,36px)}
+.proof{position:relative;z-index:2;margin:0;font-weight:600}
+.proof a{color:var(--accent);display:inline-block;padding-block:8px}
+.disc{position:absolute;z-index:1;top:50%;right:calc(-1 * clamp(120px,14vw,260px));width:min(112vh,68vw);aspect-ratio:1;translate:0 -50%;border-radius:50%;overflow:hidden;background:#40464f;animation:rise 1.2s var(--ease) both}
+.disc img{width:100%;height:100%;object-fit:cover;object-position:62% 45%;transform:translate3d(0,var(--py,0),0) scale(1.08);will-change:transform}
+@keyframes rise{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
+.light{background:var(--paper);color:var(--accent-ink)}
+.prices{padding:clamp(72px,12vh,150px) var(--m)}
+.prices-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(32px,5vh,56px)}
+.prices-head p{margin:0;font-size:var(--lead);line-height:1.35}
+.find{display:block;margin-bottom:0}
+.find span{display:block;font-weight:600;margin-bottom:8px}
+.find input{width:100%;min-height:60px;border:0;border-radius:999px;background:var(--tone);color:inherit;padding:0 28px;font:inherit;font-size:var(--lead)}
+.find input::placeholder{color:#5c5f57}
+.price-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.tabs{display:none;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.js .tabs{display:flex}
+.tab{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:6px 20px 6px 6px;border:0;border-radius:999px;background:var(--tone);color:inherit;font:600 var(--body)/1.2 Manrope,sans-serif;cursor:pointer;transition:background-color .2s,transform .35s var(--ease)}
+.tab img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.tab:hover{transform:translateY(-2px)}
+.tab[aria-pressed=true]{background:var(--accent-ink);color:#fff}
+.group h3{font-size:var(--lead);margin:0 0 12px}
+.js .group h3{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.group{margin-bottom:32px}
+.js .group[hidden]{display:none}
+.group ul{list-style:none;margin:0;padding:0}
+.group li{display:flex;justify-content:space-between;gap:20px;padding:13px 20px;border-radius:14px;align-items:baseline}
+.group li:nth-child(odd){background:var(--tone)}
+.group li b{white-space:nowrap;font-weight:700}
+.empty{display:none;font-size:var(--lead);line-height:1.35;max-width:32ch;margin:0}
+.empty a{font-weight:700}
+.frame{position:sticky;top:96px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--tone)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame img.in{animation:shutter .8s var(--ease) both}
+@keyframes shutter{from{clip-path:circle(0 at 50% 50%)}to{clip-path:circle(75% at 50% 50%)}}
+.care{scroll-margin-top:68px;padding:clamp(72px,12vh,150px) var(--m);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center;background:var(--accent);color:var(--accent-ink)}
+.care .pic{aspect-ratio:1;border-radius:50%;overflow:hidden}
+.care .pic img{width:100%;height:100%;object-fit:cover;object-position:38% 42%}
+.care h2{margin-bottom:clamp(24px,4vh,40px)}
+.care blockquote{margin:0}
+.care .big{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem);line-height:1.3;font-weight:600;letter-spacing:-.02em;margin-bottom:clamp(24px,4vh,40px)}
+.said{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px clamp(24px,3vw,48px);align-items:start}
+.all{display:inline-block;margin-top:clamp(20px,3vh,32px);padding-block:10px;font-weight:600;color:inherit}
+.contact{padding:clamp(56px,9vh,96px) var(--m)}
+.coupon{position:relative;background:var(--surface);border-radius:24px;padding:clamp(28px,5vw,72px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px clamp(32px,6vw,96px);align-items:center;overflow:hidden}
+.coupon .btn.alt{background:#303030}.coupon .btn.alt:hover{background:#3d3d3d}
+.coupon h2{margin-bottom:24px}
+.facts{display:grid;gap:8px;font-size:var(--lead);line-height:1.35}
+.facts a{font-weight:600}
+.links{display:flex;flex-direction:column;gap:12px}
+.links .btn{width:100%}
+footer{padding:0 var(--m) 28px;overflow:hidden}
+.bigmark{font-size:clamp(3.5rem,17.5vw,20rem);line-height:.95;font-weight:600;letter-spacing:-.04em;margin:0 0 24px;white-space:nowrap}
+.fine{font-size:var(--small);color:var(--muted);margin:0 0 8px;max-width:95ch}
+.fine a{color:inherit}
+.reveal{opacity:1}
+.js .reveal{opacity:0;translate:0 26px;transition:opacity .8s var(--ease),translate .8s var(--ease);transition-delay:var(--d,0ms)}
+.js .reveal.on{opacity:1;translate:0 0}
+@media (max-width:900px){.hero{min-height:auto;padding-top:36px;gap:28px}.hero .copy{max-width:none}.disc{position:relative;order:2;top:auto;right:auto;translate:none;width:112vw;margin:0 -6vw 0 auto;margin-right:calc(-16vw)}.proof{order:1}.prices-head,.price-grid,.care,.coupon,.said{grid-template-columns:minmax(0,1fr)}.frame{display:none}.care .pic{max-width:78vw}.bar nav{display:none}.actions .btn{flex:1 1 100%}.js .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.tab{padding-right:12px;text-align:left}.tab span{min-width:0}.group li{padding:12px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.disc,.frame img.in{animation:none}.js .reveal{opacity:1;translate:none;transition:none}.btn,.tab{transition:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<header class="bar"><a class="mark" href="#top">Кэти Пэт</a><nav aria-label="Разделы"><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contact">Контакты</a></nav><a class="btn small" href="#contact">Записаться</a></header>
+<main id="top">
+<section class="hero">
+  <div class="copy">
+    <h1>Груминг в Барнауле</h1>
+    <p class="sub">Собаки и кошки, от 1 400 ₽. Переулок Ядринцева, 95.</p>
+    <div class="actions"><a class="btn" href="#prices">Узнать цену для своей породы</a><a class="btn alt" href="tel:+79609665951">+7 960 966-59-51</a></div>
+  </div>
+  <div class="disc"><img src="img/pom.webp" width="1500" height="994" alt="Рыжий пушистый шпиц в профиль"></div>
+  <p class="proof">5,0 в 2ГИС, <a href="https://2gis.ru/barnaul/firm/70000001100354708/tab/reviews">515 отзывов</a></p>
+</section>
+<section class="prices light" id="prices">
+  <div class="prices-head">
+    <h2 class="reveal">Цены по породам</h2>
+    <label class="find reveal" style="--d:80ms"><span>Найти свою породу</span><input id="q" type="search" placeholder="Например, шпиц" autocomplete="off"></label>
+  </div>
+  <div class="price-grid">
+    <div class="reveal" style="--d:140ms">
+      <div class="tabs" id="tabs"><button class="tab" type="button" data-g="small" aria-pressed="true"><img src="img/t-bichon.webp" alt="" width="44" height="44" loading="lazy"><span>Мелкие породы</span></button><button class="tab" type="button" data-g="mid" aria-pressed="false"><img src="img/t-corgi.webp" alt="" width="44" height="44" loading="lazy"><span>Средние породы</span></button><button class="tab" type="button" data-g="big" aria-pressed="false"><img src="img/t-golden.webp" alt="" width="44" height="44" loading="lazy"><span>Крупные породы</span></button><button class="tab" type="button" data-g="cat" aria-pressed="false"><img src="img/t-coon.webp" alt="" width="44" height="44" loading="lazy"><span>Кошки</span></button><button class="tab" type="button" data-g="extra" aria-pressed="false"><img src="img/t-shih.webp" alt="" width="44" height="44" loading="lazy"><span>Когти и уход</span></button></div>
+      <div id="groups"><div class="group" data-g="small" data-img="bichon" data-alt="Бишон" data-pos="50% 28%"><h3>Мелкие породы</h3><ul><li data-a="болонка "><span>Бишон фризе</span><b>1 700–2 300 ₽</b></li><li data-a="вести "><span>Вест-хайленд-уайт-терьер</span><b>1 600–2 300 ₽</b></li><li data-a=" "><span>Грифон</span><b>1 700–1 900 ₽</b></li><li data-a="джек "><span>Джек-рассел-терьер</span><b>1 700–1 900 ₽</b></li><li data-a="йоркширский терьер "><span>Йорк</span><b>1 700–2 000 ₽</b></li><li data-a=" "><span>Кинг Чарльз спаниель</span><b>1 900–2 300 ₽</b></li><li data-a=" "><span>Китайская хохлатая, голая</span><b>1 600–1 900 ₽</b></li><li data-a=" "><span>Китайская хохлатая, пуховая</span><b>1 700–2 000 ₽</b></li><li data-a="мальтезе "><span>Мальтийская болонка</span><b>1 700–2 000 ₽</b></li><li data-a=" "><span>Мальтипу</span><b>1 700–2 000 ₽</b></li><li data-a=" "><span>Мопс</span><b>1 700–1 900 ₽</b></li><li data-a=" "><span>Папильон</span><b>1 700–1 900 ₽</b></li><li data-a=" "><span>Пекинес</span><b>1 700–2 200 ₽</b></li><li data-a=" "><span>Пти-брабансон</span><b>1 700–1 900 ₽</b></li><li data-a=" "><span>Пудель той, до 28 см</span><b>1 700–2 200 ₽</b></li><li data-a=" "><span>Пудель карликовый, 29–35 см</span><b>1 800–2 400 ₽</b></li><li data-a="шиба "><span>Сиба-ину</span><b>2 000–2 500 ₽</b></li><li data-a="таксик "><span>Такса</span><b>1 700–1 900 ₽</b></li><li data-a="француз "><span>Французский бульдог</span><b>1 700–1 900 ₽</b></li><li data-a="чихуа хуа "><span>Чихуахуа</span><b>1 600–1 800 ₽</b></li><li data-a="шитцу ши тцу "><span>Ши-тцу</span><b>1 700–2 200 ₽</b></li><li data-a="померанский "><span>Шпиц</span><b>1 700–2 000 ₽</b></li></ul></div><div class="group" data-g="mid" data-img="corgi" data-alt="Корги" data-pos="50% 22%"><h3>Средние породы</h3><ul><li data-a=" "><span>Бигль</span><b>1 900–2 400 ₽</b></li><li data-a="вельш пемброк кардиган "><span>Корги</span><b>2 000–2 500 ₽</b></li><li data-a=" "><span>Пудель малый, 36–45 см</span><b>2 000–2 600 ₽</b></li><li data-a=" "><span>Спаниель: американский, английский, русский</span><b>2 000–2 500 ₽</b></li></ul></div><div class="group" data-g="big" data-img="golden" data-alt="Золотистый ретривер" data-pos="62% 30%"><h3>Крупные породы</h3><ul><li data-a="хатико "><span>Акита-ину</span><b>3 500–4 500 ₽</b></li><li data-a="австралийская "><span>Аусси</span><b>2 500–4 000 ₽</b></li><li data-a="золотистый "><span>Голден ретривер</span><b>3 000–4 000 ₽</b></li><li data-a=" "><span>Далматинец</span><b>3 000–3 500 ₽</b></li><li data-a=" "><span>Лабрадор</span><b>3 000–4 000 ₽</b></li><li data-a="немецкая "><span>Овчарка</span><b>3 000–4 500 ₽</b></li><li data-a=" "><span>Самоед</span><b>3 000–4 500 ₽</b></li><li data-a="сибирский "><span>Хаски</span><b>3 000–3 500 ₽</b></li></ul></div><div class="group" data-g="cat" data-img="coon" data-alt="Мейн-кун" data-pos="38% 24%"><h3>Кошки</h3><ul><li data-a=" кот кошка кошки котик"><span>Короткошёрстные</span><b>1 700–1 900 ₽</b></li><li data-a=" кот кошка кошки котик"><span>Длинношёрстные</span><b>1 800–2 200 ₽</b></li><li data-a=" кот кошка кошки котик"><span>Мейн-кун</span><b>2 000–2 300 ₽</b></li><li data-a=" кот кошка кошки котик"><span>Сфинкс</span><b>1 400–1 600 ₽</b></li></ul></div><div class="group" data-g="extra" data-img="shih" data-alt="Ши-тцу" data-pos="45% 50%"><h3>Когти и уход</h3><ul><li data-a=" когти уход"><span>Стрижка когтей, мелкие породы</span><b>200 ₽</b></li><li data-a=" когти уход"><span>Стрижка когтей, средние породы</span><b>300 ₽</b></li><li data-a=" когти уход"><span>Стрижка когтей, крупные породы</span><b>400 ₽</b></li><li data-a=" когти уход"><span>Чистка ушек</span><b>100–200 ₽</b></li><li data-a=" когти уход"><span>Подушечки, переносица, мордочка</span><b>200–500 ₽</b></li><li data-a=" когти уход"><span>Вычёс колтунов, от 15 минут</span><b>200–800 ₽</b></li><li data-a=" когти уход"><span>Обработка от блох</span><b>300–500 ₽</b></li><li data-a=" когти уход"><span>Окрашивание лап, ушей или хвоста</span><b>300–500 ₽</b></li></ul></div></div>
+      <p class="empty" id="empty" aria-live="polite">Такой породы нет в прайсе. <a href="tel:+79609665951">Позвоните</a>, подскажем цену.</p>
+    </div>
+    <div class="frame reveal" style="--d:200ms" aria-hidden="true"><img id="frame" src="img/bichon.webp" alt="" loading="lazy" style="object-position:50% 28%"></div>
+  </div>
+</section>
+<section class="care" id="reviews">
+  <div class="pic reveal"><img src="img/samoyed.webp" width="1000" height="667" loading="lazy" alt="Белый пушистый самоед на траве"></div>
+  <div>
+    <h2 class="reveal">Что о нас говорят</h2>
+    <blockquote class="big reveal" style="--d:70ms">«Мастера общаются с питомцами как с маленькими детьми, что огромный плюс»</blockquote>
+    <div class="said">
+      <blockquote class="reveal" style="--d:140ms">«Долго искали хороший салон для нашего пёсика и остановились на этом. Теперь будем ходить только сюда»</blockquote>
+      <blockquote class="reveal" style="--d:210ms">«Будем доверять своего мелкого демона только в эти руки. Каким-то чудесным образом он дал себя стричь»</blockquote>
+    </div>
+    <a class="all reveal" href="https://2gis.ru/barnaul/firm/70000001100354708/tab/reviews">Все 515 отзывов в 2ГИС</a>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="coupon">
+    <div>
+      <h2 class="reveal">Как записаться</h2>
+      <div class="facts reveal" style="--d:80ms"><span>Барнаул, переулок Ядринцева, 95, цокольный этаж</span><span>С 10:00 до 20:00, четверг выходной</span><a href="tel:+79609665951">+7 960 966-59-51</a></div>
+    </div>
+    <div class="links reveal" style="--d:140ms"><a class="btn" href="tel:+79609665951">Позвонить</a><a class="btn alt" href="https://t.me/katigroom">Написать в Telegram</a><a class="btn alt" href="https://2gis.ru/barnaul/firm/70000001100354708">Маршрут в 2ГИС</a></div>
+  </div>
+</section>
+</main>
+<footer>
+  <p class="bigmark" aria-hidden="true">Кэти Пэт</p>
+  <p class="fine">Демо-версия сайта. Цены и отзывы взяты из 2ГИС, цены не являются публичной офертой. На фото породы для примера, в рабочей версии здесь будут ваши работы.</p>
+  <p class="fine">Фото: Wikimedia Commons, авторы и лицензии в <a href="credits.html">списке</a>.</p>
+</footer>
+<script>
+(function(){
+  var groups=[].slice.call(document.querySelectorAll('.group')),tabs=[].slice.call(document.querySelectorAll('.tab')),q=document.getElementById('q'),empty=document.getElementById('empty'),frame=document.getElementById('frame'),current='small';
+  function show(g){if(!frame.parentElement.offsetParent)return;var img=g.dataset.img;if(frame.getAttribute('src').indexOf(img)>-1)return;var n=new Image();n.src='img/'+img+'.webp';n.onload=function(){frame.src=n.src;frame.style.objectPosition=g.dataset.pos;frame.classList.remove('in');void frame.offsetWidth;frame.classList.add('in')}}
+  function pick(k){current=k;tabs.forEach(function(t){t.setAttribute('aria-pressed',t.dataset.g===k)});groups.forEach(function(g){g.hidden=g.dataset.g!==k;g.querySelectorAll('li').forEach(function(li){li.hidden=false;li.style.display=''});if(g.dataset.g===k)show(g)});empty.style.display='none'}
+  tabs.forEach(function(t){t.addEventListener('click',function(){q.value='';pick(t.dataset.g)})});
+  function norm(s){return s.toLowerCase().replace(/ё/g,'е')}
+  q.addEventListener('input',function(){var v=norm(q.value.trim());if(!v){pick(current);return}var ws=v.split(/\s+/).filter(function(w){return w.length>1});var found=0,first=null;groups.forEach(function(g){var c=0;g.querySelectorAll('li').forEach(function(li){var hay=norm(li.textContent+' '+(li.dataset.a||''));var m=ws.some(function(w){return hay.indexOf(w)>-1});li.hidden=!m;li.style.display=m?'':'none';if(m)c++});g.hidden=!c;if(c){found+=c;first=first||g}});tabs.forEach(function(t){t.setAttribute('aria-pressed','false')});empty.style.display=found?'none':'block';if(first)show(first)});
+  q.addEventListener('search',function(){if(!q.value){groups.forEach(function(g){g.querySelectorAll('li').forEach(function(li){li.style.display=''})});pick(current)}});
+  pick('small');
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('on')})}
+  var pom=document.querySelector('.disc img');
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches){var tick=false;addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){pom.style.setProperty('--py',Math.min(scrollY*.06,50)+'px');tick=false})},{passive:true})}
+})();
+</script>
+</body>
+</html>
