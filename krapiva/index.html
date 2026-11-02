@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f4f2ec">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://onkhas1.github.io/demos/krapiva/">
+<meta property="og:image" content="https://onkhas1.github.io/demos/krapiva/img/og.jpg">
+<meta property="og:title" content="Крапива — стейк-паб на Взлётной">
+<meta property="og:description" content="Бургеры от 360 ₽, стейки от 440 ₽. Всё меню на сайте.">
+<title>Крапива — стейк-паб в Барнауле</title>
+<meta name="description" content="Стейк-паб Крапива, Барнаул, Взлётная, 81. Бургеры, стейки, гриль и пиво. Всё меню с ценами, счастливые часы, бронь стола.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff2d78'/%3E%3Crect x='7' y='7' width='18' height='18' fill='%230d0d0d'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/wall.webp">
+<link rel="preload" as="font" type="font/woff2" href="fonts/oswald-cyrillic-600-normal.woff2" crossorigin>
+<style>
+@font-face{font-family:Oswald;font-weight:600;font-display:swap;src:url(fonts/oswald-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0400-04FF,U+2116}
+@font-face{font-family:Oswald;font-weight:600;font-display:swap;src:url(fonts/oswald-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20BD}
+@font-face{font-family:Golos;font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0400-04FF,U+2116}
+@font-face{font-family:Golos;font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20BD}
+@font-face{font-family:PTM;font-weight:400;font-display:swap;src:url(fonts/pt-mono-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0400-04FF,U+2116}
+@font-face{font-family:PTM;font-weight:400;font-display:swap;src:url(fonts/pt-mono-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20BD}
+:root{--paper:#f4f2ec;--white:#fff;--ink:#0d0d0d;--pink:#ff2d78;--m:clamp(14px,3vw,44px);--ease:cubic-bezier(.2,1.4,.5,1)}
+*{box-sizing:border-box}
+html{color-scheme:light;scroll-behavior:smooth;scroll-padding-top:74px;scrollbar-color:var(--ink) var(--paper);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 clamp(16px,1.1vw,18px)/1.45 PTM,ui-monospace,monospace;overflow-x:clip;font-synthesis:weight}
+::selection{background:var(--pink);color:var(--ink)}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+h1,h2,h3,.t,.btn{font-family:Oswald,Impact,sans-serif;font-weight:600;text-transform:uppercase}
+.t{display:inline-block;padding:.04em .16em .06em;line-height:1;text-decoration:none}
+.k{background:var(--ink);color:var(--paper)}
+.p{background:var(--pink);color:var(--ink)}
+.w{background:var(--paper);color:var(--ink)}
+.skip{position:absolute;left:var(--m);top:-80px;z-index:30;background:var(--pink);color:var(--ink);padding:12px 20px}
+.skip:focus{top:8px}
+.btn,.jump a{touch-action:manipulation}
+.bar{position:sticky;top:0;z-index:20;background:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px var(--m)}
+.mark{display:inline-flex;align-items:center;min-height:44px;font-size:1.5rem;text-decoration:none;white-space:nowrap}
+.mark .t{padding:.06em .08em}
+.bar nav{display:flex;gap:clamp(14px,2.2vw,32px)}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{background:var(--ink);color:var(--paper)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;background:var(--pink);color:var(--ink);font-size:1.3rem;text-decoration:none;border:0;cursor:pointer;transform:rotate(var(--r,1deg));transition:transform .18s var(--ease),background-color .1s,color .1s}
+.btn:hover{transform:rotate(-2deg) scale(1.05);background:var(--ink);color:var(--paper)}
+.btn:active{transform:scale(.97)}
+.btn.small{min-height:44px;font-size:1.1rem;padding:0 16px;--r:0deg}
+.btn.dark{background:var(--ink);color:var(--paper);--r:-1deg}
+.btn.dark:hover{background:var(--pink);color:var(--ink)}
+.hero{position:relative;min-height:calc(100svh - 60px);overflow:hidden;background:#222}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:grayscale(1) contrast(1.12)}
+.hero .in{position:relative;min-height:calc(100svh - 60px);padding:var(--m);display:flex;flex-direction:column;justify-content:flex-end;gap:14px}
+h1{margin:0;font-size:clamp(3rem,15.2vw,18rem);line-height:.98;white-space:nowrap;letter-spacing:0}
+h1 span{display:inline-block;padding:.03em .09em .06em;transform:rotate(var(--a));animation:slap .32s var(--ease) both}
+@keyframes slap{from{opacity:0;transform:scale(1.7) rotate(calc(var(--a) * 4))}}
+.note{align-self:flex-start;background:var(--paper);padding:12px 16px;transform:rotate(-.8deg);max-width:42ch;margin:0;animation:slap .32s var(--ease) .55s both;--a:-.8deg}
+.note strong{display:block;font-family:Oswald,Impact,sans-serif;font-weight:600;text-transform:uppercase;font-size:1.35em;line-height:1.15;margin-bottom:4px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hh{background:var(--pink);padding:14px var(--m);display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;justify-content:space-between}
+.hh b{font-family:Oswald,Impact,sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(1.5rem,1rem + 2vw,2.75rem);line-height:1.05}
+.hh span{font-weight:400}
+main{overflow-x:clip}
+.menu{padding:clamp(56px,10vh,110px) var(--m)}
+.menu-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px clamp(24px,5vw,72px);align-items:end;margin-bottom:24px}
+h2{margin:0;font-size:clamp(3rem,1.6rem + 6.4vw,8rem);line-height:1}
+.find span{display:block;margin-bottom:6px}
+.find input{width:100%;min-height:56px;background:var(--white);border:3px solid var(--ink);padding:0 14px;font:inherit;font-size:1.15em;color:var(--ink);border-radius:0}
+.find input::placeholder{color:#5a5a5a}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(28px,5vh,52px)}
+.jump a{display:inline-flex;align-items:center;min-height:44px;font-size:clamp(1.25rem,1rem + 1vw,1.9rem);transition:transform .15s var(--ease)}
+.jump a:nth-child(odd){transform:rotate(-1deg)}
+.jump a:nth-child(even){transform:rotate(1deg)}
+.jump a:hover{transform:rotate(0) scale(1.06)}
+.jump a.active{background:var(--white);color:var(--ink);outline:3px solid var(--ink);outline-offset:-3px}
+.pair{position:relative;margin-bottom:clamp(44px,8vh,92px)}
+.pair.left,.pair.right{display:grid;gap:clamp(18px,3vw,44px);align-items:start}
+.pair.left{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr)}
+.pair.right{grid-template-columns:minmax(0,1.38fr) minmax(0,.62fr)}
+.pair.right .snap{order:2}
+.pair.wide .snap{position:absolute;z-index:2;top:-22px;right:clamp(0px,2vw,28px);width:clamp(180px,20vw,290px)}
+.pair.wide .sheet ul{columns:2;column-gap:clamp(24px,4vw,56px)}
+.pair.wide .sheet li{break-inside:avoid}
+.pair.wide h3{display:table;margin-bottom:calc(clamp(180px,20vw,290px) * .75 - 78px)}
+.pair.wide .snap img{aspect-ratio:4/3}
+.pair.plain .sheet ul{columns:2;column-gap:clamp(24px,4vw,56px)}
+.snap{margin:0;transform:rotate(var(--a));background:var(--white);padding:9px}
+.snap img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.sheet{background:var(--white);padding:clamp(20px,2.6vw,38px);transform:rotate(var(--a))}
+.sheet h3{margin:0 0 .45em;font-size:clamp(2.2rem,1.4rem + 3vw,4.5rem);transform:rotate(-1deg)}
+.sheet ul{list-style:none;margin:0;padding:0}
+.sheet li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 14px;padding:9px 0}
+.sheet li b{font:600 clamp(1.25rem,1.1rem + .4vw,1.5rem)/1.12 Oswald,Impact,sans-serif;text-transform:uppercase}
+.sheet li .price{background:var(--ink);color:var(--paper);padding:1px 7px;white-space:nowrap;align-self:start}
+.sheet li p{grid-column:1/-1;margin:0;font:400 .95em/1.38 Golos,system-ui,sans-serif;max-width:58ch}
+.searching .snap{display:none}
+.searching .pair{margin-bottom:24px}
+.searching .sheet{max-width:760px}
+.searching .pair.wide h3{margin-bottom:.45em}
+.searching .sheet ul{columns:1}
+.searching .pair.left,.searching .pair.right{display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0}
+.empty{display:none;background:var(--pink);padding:14px 16px;font-size:1.1em;max-width:44ch;margin:0 0 24px}
+.drink{font-size:1.1em;max-width:46ch;margin:0;background:var(--pink);display:inline-block;padding:8px 12px;transform:rotate(-1deg)}
+.say{position:relative;overflow:hidden;background:#222;min-height:clamp(560px,100svh,960px);display:flex;align-items:flex-end}
+.roomimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.onwall{position:relative;width:100%;padding:clamp(40px,8vh,90px) var(--m)}
+.say h2{margin-bottom:clamp(20px,3vh,36px);font-size:clamp(2.75rem,1.4rem + 5.4vw,7rem)}
+.say h2 span{display:inline-block;padding:.03em .12em .06em}
+.notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.4vw,30px);align-items:start;max-width:1200px}
+.notes blockquote{margin:0;background:var(--white);padding:18px 20px;transform:rotate(var(--a));font-size:1.08em}
+.notes blockquote:nth-child(2){margin-top:24px}
+.say .more{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;padding:0 12px;background:var(--paper)}
+.book{background:var(--ink);color:var(--paper);padding:clamp(56px,10vh,110px) var(--m);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px clamp(32px,6vw,96px);align-items:end}
+.book h2{font-size:clamp(3rem,1.6rem + 6.6vw,8.5rem);margin-bottom:22px}
+.book h2 span{display:inline-block;padding:.03em .1em .06em}
+.facts{display:grid;gap:4px;font-size:1.15em}
+.facts a{display:inline-flex;align-items:center;min-height:44px;width:fit-content}
+.book .btn:hover{background:var(--white);color:var(--ink)}
+.book .btn.alt{background:var(--paper)}
+.acts{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.acts .btn{--r:0deg}
+footer{background:var(--ink);color:var(--paper);padding:0 var(--m) 22px;overflow:hidden}
+.big{font-size:clamp(3rem,15.4vw,20rem);line-height:.98;white-space:nowrap;margin:0 0 14px;font-family:Oswald,Impact,sans-serif;font-weight:600;text-transform:uppercase}
+.big span{display:inline-block;padding:.03em .09em .06em;transform:rotate(var(--a))}
+.fine{font-size:.875rem;margin:0;max-width:90ch;opacity:.85}
+.js .r{opacity:0}
+.js .r.on{opacity:1;animation:paste .3s var(--ease) both}
+@keyframes paste{from{opacity:0;transform:scale(1.05) rotate(calc(var(--a,0deg) * 3))}to{transform:rotate(var(--a,0deg))}}
+@media (max-width:820px){html{scroll-padding-top:130px}.bar nav{display:none}.menu-head,.pair.left,.pair.right,.book,.notes{grid-template-columns:minmax(0,1fr)}.pair.right .snap{order:0;margin-left:auto}.pair.left .snap,.pair.right .snap{max-width:66%}.pair.wide .snap{position:static;max-width:66%;width:auto;margin:0 0 -28px auto;z-index:2}.snap{padding:7px}.snap img{aspect-ratio:4/3}.pair.wide .sheet ul,.pair.plain .sheet ul{columns:1}.notes blockquote:nth-child(2){margin-top:0}.row .btn{flex:1 1 100%}.say{display:block;min-height:0;background:var(--paper)}.roomimg{position:static;height:52vw;min-height:240px}.say .more{padding-left:0;background:none}.jump{position:sticky;top:60px;z-index:10;background:var(--paper);flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1 * var(--m));padding:6px var(--m);scrollbar-width:none}.jump a{flex:0 0 auto;transform:none}.jump a:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1 span,.note,.js .r.on{animation:none}.js .r{opacity:1}.btn,.jump a{transition:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#menu">Перейти к меню</a>
+<header class="bar"><a class="mark" href="#top" translate="no"><span class="t k">Кра</span><span class="t p">пива</span></a><nav aria-label="Разделы"><a href="#menu">Меню</a><a href="#reviews">Зал</a><a href="#contact">Адрес</a></nav><a class="btn small" href="#contact">Занять стол</a></header>
+<main id="top">
+<section class="hero">
+  <img src="img/wall.webp" fetchpriority="high" width="1100" height="1466" alt="Стена Крапивы с граффити и надписью BEER, на столе бургеры">
+  <div class="in">
+    <h1 aria-label="Крапива" translate="no"><span class="w" style="--a:-3deg;animation-delay:0ms" aria-hidden="true">К</span><span class="k" style="--a:2deg;animation-delay:70ms" aria-hidden="true">Р</span><span class="w" style="--a:-1deg;animation-delay:140ms" aria-hidden="true">А</span><span class="p" style="--a:3deg;animation-delay:210ms" aria-hidden="true">П</span><span class="p" style="--a:-2deg;animation-delay:280ms" aria-hidden="true">И</span><span class="p" style="--a:1deg;animation-delay:350ms" aria-hidden="true">В</span><span class="p" style="--a:-3deg;animation-delay:420ms" aria-hidden="true">А</span></h1>
+    <p class="note"><strong>Стейк-паб на <a href="#contact">Взлётной, 81</a></strong>Бургеры от 360&nbsp;₽, стейки от 440&nbsp;₽. <span id="open">С 12:00 до 00:00, в пятницу и субботу до 01:00.</span></p>
+    <div class="row"><a class="btn" href="#menu">Смотреть меню</a><a class="btn dark" href="tel:+73852580707">+7 (3852) 58-07-07</a></div>
+  </div>
+</section>
+<div class="hh"><b id="hhTitle">Счастливые часы</b><span>Понедельник–четверг, 13:00–17:00. Бургеры −15%</span></div>
+<section class="menu" id="menu">
+  <div class="menu-head">
+    <h2 class="t k r" style="justify-self:start;--a:-1deg">Меню</h2>
+    <label class="find r"><span>Что хотите съесть?</span><input id="q" name="dish" type="search" placeholder="Например, рибай…" autocomplete="off"></label>
+  </div>
+  <div class="jump" id="jump"><a href="#burgers" class="t k">Бургеры</a><a href="#steaks" class="t p">Стейки</a><a href="#grill" class="t k">Гриль</a><a href="#snacks" class="t p">Закуски</a><a href="#salads" class="t k">Салаты</a><a href="#sides" class="t p">Гарниры</a></div>
+  <p class="sr" id="count" aria-live="polite"></p>
+  <p class="empty" id="empty"></p>
+  <div id="pairs"><section class="pair wide" id="burgers"><figure class="snap" style="--a:3deg"><img src="img/burger.webp" width="800" height="1000" loading="lazy" alt="Бургер на дощечке" style="object-position:50% 82%"></figure><div class="sheet r" style="--a:-1.1deg"><h3 class="t p">Бургеры</h3><ul><li data-a="бургер"><b>Стартер</b><span class="price">360&nbsp;₽</span><p>Котлета из свинины и говядины, чеддер, айсберг, томат, сырный соус, белая булочка</p></li><li data-a="бургер"><b>Сытый батя</b><span class="price">450&nbsp;₽</span><p>Котлета из свинины и говядины, карамелизированный лук, чеддер, моцарелла, салат, грибной жюльен</p></li><li data-a="бургер"><b>Want</b><span class="price">380&nbsp;₽</span><p>Мясная котлета, сыр, хрустящий бекон, маринованный огурец, айсберг, соус барбекю</p></li><li data-a="курица куриный бургер"><b>Пылкая цыпочка</b><span class="price">440&nbsp;₽</span><p>Куриное филе, творожный сыр с базиликом и вялеными томатами, айсберг, кисло-сладкий соус</p></li><li data-a="бургер"><b>Buffalos</b><span class="price">440&nbsp;₽</span><p>Котлета из говядины, бекон, шампиньоны, чеддер, соус барбекю и ягодный</p></li><li data-a="бургер"><b>Bull</b><span class="price">460&nbsp;₽</span><p>Котлета из свинины и говядины, чеддер, огурец, помидор, маринованный лук, айсберг, острый соус</p></li><li data-a="бургер бургер"><b>Чёрная мамба</b><span class="price">480&nbsp;₽</span><p>Мраморная говядина, чёрная булочка, чеддер, пармезан, бекон, сырный соус и пряная вишня</p></li><li data-a="бургер бургер"><b>Чёрная каракатица</b><span class="price">480&nbsp;₽</span><p>Мраморная говядина, чёрная булочка, чеддер, пармезан, бекон, BBQ, сырный соус и пряная черника</p></li><li data-a="бургер"><b>4 сыра</b><span class="price">450&nbsp;₽</span><p>Мраморная говядина, бекон, чеддер, моцарелла, пармезан, сырный соус, чёрная булочка</p></li><li data-a="бургер"><b>Jack Daniels</b><span class="price">730&nbsp;₽</span><p>Две котлеты из мраморной говядины, чёрная булочка, два чеддера, два бекона, огурец, соус Jack Daniels</p></li><li data-a="бургер"><b>Карабаss</b><span class="price">930&nbsp;₽</span><p>Две котлеты, два чеддера, две моцареллы, пармезан, два бекона, томат, лук, айсберг, грибной жюльен, сырный соус и BBQ</p></li><li data-a="курица куриный бургер"><b>Spicy Chicken</b><span class="price">440&nbsp;₽</span><p>Куриное филе, томат, айсберг, халапеньо, сырный и чесночный соус</p></li><li data-a="курица куриный бургер"><b>Цезарь</b><span class="price">440&nbsp;₽</span><p>Куриное филе, томат, айсберг, соус Цезарь, пармезан</p></li><li data-a="бургер"><b>Таёжный</b><span class="price">480&nbsp;₽</span><p>Мраморная говядина, чеддер, бекон, лук фри, BBQ и брусничный соус</p></li></ul></div></section><section class="pair left" id="steaks"><figure class="snap" style="--a:-2.5deg"><img src="img/steak.webp" width="800" height="1000" loading="lazy" alt="Стейк и бокал пива" style="object-position:35% 62%"></figure><div class="sheet r" style="--a:1.2deg"><h3 class="t k">Стейки</h3><ul><li data-a="стейк"><b>Из свинины</b><span class="price">440&nbsp;₽</span></li><li data-a="стейк курица"><b>Из куриной грудки</b><span class="price">460&nbsp;₽</span></li><li data-a="стейк"><b>Говядина Тендерлойн</b><span class="price">590&nbsp;₽</span><p>Прожарка на выбор, от Rare до Well Done</p></li><li data-a="стейк"><b>Говядина Нью-Йорк</b><span class="price">690&nbsp;₽</span><p>Прожарка на выбор, от Rare до Well Done</p></li><li data-a="стейк рыба лосось семга"><b>Из сёмги</b><span class="price">890&nbsp;₽</span></li><li data-a="стейк рибай"><b>Рибай из мраморной говядины</b><span class="price">950&nbsp;₽</span><p>Прожарка на выбор, от Rare до Well Done</p></li></ul></div></section><section class="pair right" id="grill"><figure class="snap" style="--a:2.5deg"><img src="img/grill.webp" width="800" height="1000" loading="lazy" alt="Мясо на гриле и пиво" style="object-position:50% 60%"></figure><div class="sheet r" style="--a:-1.3deg"><h3 class="t p">Гриль</h3><ul><li data-a="мясо свинина"><b>Рёбра BBQ с картофелем фри</b><span class="price">550&nbsp;₽</span></li><li data-a="курица куриные"><b>Крылья BBQ</b><span class="price">430&nbsp;₽</span></li><li data-a=""><b>Креветки на гриле</b><span class="price">580&nbsp;₽</span></li><li data-a=""><b>Кальмар на гриле</b><span class="price">480&nbsp;₽</span></li><li data-a="мясо"><b>Шашлык из свинины</b><span class="price">490&nbsp;₽</span></li><li data-a=""><b>Бифштекс с картофелем по-деревенски</b><span class="price">490&nbsp;₽</span></li><li data-a=""><b>Говядина с картофелем и грибами</b><span class="price">430&nbsp;₽</span><p>Шампиньоны, красный лук, цукини, картофель по-деревенски, сливочный соус</p></li><li data-a="мясо"><b>Мясной сет</b><span class="price">2 950&nbsp;₽</span><p>Стейки из свинины, говядины и курицы, шашлык из свинины, овощи на гриле</p></li><li data-a="мясо стейк рибай"><b>Сет «Премиум»</b><span class="price">2 400&nbsp;₽</span><p>Два рибая из мраморной говядины, картофельные дольки, кукуруза, шампиньоны, перец, два соуса</p></li></ul></div></section><section class="pair wide" id="snacks"><figure class="snap" style="--a:-3deg"><img src="img/snacks.webp" width="800" height="1000" loading="lazy" alt="Картофельные дольки, чёрный бургер и пиво" style="object-position:50% 82%"></figure><div class="sheet r" style="--a:1deg"><h3 class="t k">Закуски</h3><ul><li data-a=""><b>Сет BBQ</b><span class="price">950&nbsp;₽</span><p>Рёбра, крылья, чесночные гренки, картофель фри</p></li><li data-a=""><b>Пивной сет MAXI</b><span class="price">850&nbsp;₽</span><p>Сырные и рыбные палочки, луковые кольца, кольца кальмара, гренки, фри, чипсы, два соуса</p></li><li data-a="рыба"><b>Сельдь с картофелем</b><span class="price">440&nbsp;₽</span><p>Слабосолёная сельдь, картофель по-деревенски, маринованный лук, тар-тар</p></li><li data-a=""><b>Креветки в панировке</b><span class="price">390&nbsp;₽</span></li><li data-a=""><b>Сырная нарезка</b><span class="price">390&nbsp;₽</span><p>Пармезан, гауда, моцарелла, чеддер</p></li><li data-a=""><b>Сырные палочки</b><span class="price">390&nbsp;₽</span><p>С брусничным соусом</p></li><li data-a="рыба"><b>Рыбные палочки из минтая</b><span class="price">370&nbsp;₽</span></li><li data-a=""><b>Кольца кальмара</b><span class="price">340&nbsp;₽</span></li><li data-a=""><b>Луковые кольца</b><span class="price">240&nbsp;₽</span></li><li data-a="картошка"><b>Картофельные дольки</b><span class="price">230&nbsp;₽</span></li><li data-a=""><b>Гренки чесночные</b><span class="price">220&nbsp;₽</span></li><li data-a="картошка"><b>Картофель фри</b><span class="price">220&nbsp;₽</span></li></ul></div></section><section class="pair left" id="salads"><figure class="snap" style="--a:2.5deg"><img src="img/salad.webp" width="800" height="1000" loading="lazy" alt="Салат Цезарь" style="object-position:50% 55%"></figure><div class="sheet r" style="--a:-1.2deg"><h3 class="t p">Салаты</h3><ul><li data-a="салат"><b>С хрустящими баклажанами</b><span class="price">340&nbsp;₽</span><p>Айсберг, черри, огурец, баклажаны, творожный сыр, медово-горчичная заправка</p></li><li data-a="куриный салат"><b>Цезарь с курицей</b><span class="price">380&nbsp;₽</span><p>Айсберг, черри, сухарики, куриное филе, пармезан</p></li><li data-a="салат"><b>Цезарь с креветками</b><span class="price">490&nbsp;₽</span><p>Айсберг, черри, сухарики, креветки, пармезан</p></li><li data-a="салат"><b>Тёплый с говядиной</b><span class="price">530&nbsp;₽</span><p>Айсберг, томаты, баклажан, перец, говядина, перечный соус</p></li></ul></div></section><section class="pair plain" id="sides"><div class="sheet r" style="--a:1.1deg"><h3 class="t k">Гарниры</h3><ul><li data-a="картошка"><b>Картофель по-деревенски</b><span class="price">220&nbsp;₽</span></li><li data-a=""><b>Шампиньоны гриль</b><span class="price">140&nbsp;₽</span></li><li data-a=""><b>Кукуруза гриль</b><span class="price">120&nbsp;₽</span></li><li data-a=""><b>Цукини гриль</b><span class="price">120&nbsp;₽</span></li><li data-a=""><b>Помидор гриль</b><span class="price">120&nbsp;₽</span></li></ul></div></section></div>
+  <p class="drink">Пиво и крафт выбирают на месте, у бара.</p>
+</section>
+<section class="say" id="reviews">
+  <img class="roomimg" src="img/room.webp" width="1100" height="1466" loading="lazy" alt="Зал Крапивы с диванами и зелёными лампами">
+  <div class="onwall">
+    <h2 class="r"><span class="k">Что</span> <span class="p">о нас</span> <span class="k">говорят</span></h2>
+    <div class="notes">
+      <blockquote class="r" style="--a:-2deg">«А здешние стейки — это отдельная ода. Изумительно вкусно»</blockquote>
+      <blockquote class="r" style="--a:1.6deg">«Вкусные большие бургеры и лучшая картошка фри в городе»</blockquote>
+      <blockquote class="r" style="--a:-1.2deg">«Очень любим Крапиву с подругой для вечерних посиделок после работы. Пиво свежее. Подача быстрая»</blockquote>
+    </div>
+    <a class="more" href="https://2gis.ru/barnaul/firm/70000001028565948/tab/reviews">Все отзывы в 2ГИС, 4,8 из 5</a>
+  </div>
+</section>
+<section class="book" id="contact">
+  <div>
+    <h2 class="r"><span class="p">Занять</span> <span class="w">стол</span></h2>
+    <div class="facts"><span>Барнаул, Взлётная, 81</span><span>Вс–чт 12:00–00:00, пт–сб 12:00–01:00</span><a href="tel:+73852580707">+7 (3852) 58-07-07</a><a href="tel:+79835480707">+7 983 548-07-07</a></div>
+  </div>
+  <div class="acts"><a class="btn" href="tel:+73852580707">Позвонить</a><a class="btn alt" href="https://2gis.ru/barnaul/firm/70000001028565948">Маршрут в 2ГИС</a></div>
+</section>
+</main>
+<footer>
+  <p class="big" aria-hidden="true" translate="no"><span class="w" style="--a:-2deg">Кра</span><span class="p" style="--a:1deg">пива</span></p>
+  <p class="fine">Демо-версия сайта. Меню, цены и отзывы взяты из 2ГИС и с вывески заведения, цены не являются публичной офертой. Фото из 2ГИС, в рабочей версии заменим на ваши.</p>
+</footer>
+<script>
+(function(){
+  var pairs=[].slice.call(document.querySelectorAll('.pair')),q=document.getElementById('q'),empty=document.getElementById('empty'),jump=document.getElementById('jump');
+  var count=document.getElementById('count'),main=document.getElementById('pairs'),drink=document.querySelector('.drink');
+  var STOP={'из':1,'с':1,'со':1,'и':1,'в':1,'на':1,'для':1,'по':1,'или':1};
+  function norm(s){return s.toLowerCase().replace(/ё/g,'е')}
+  function stem(w){return w.length>=5?w.slice(0,-1):w}
+  function drinks(ws){return ws.some(function(w){return /^(пив|краф|напит|лагер|эль|сидр|коктейл|вин|коф|ча|лимонад)/.test(w)})}
+  q.addEventListener('input',function(){var ws=norm(q.value.trim()).split(/\s+/).filter(function(w){return w&&!STOP[w]}).map(stem),found=0,on=ws.length>0;main.classList.toggle('searching',on);pairs.forEach(function(p){var c=0;p.querySelectorAll('li').forEach(function(li){var t=norm(li.textContent+' '+(li.dataset.a||'')).split(/[^a-zа-я0-9]+/),m=!on||ws.every(function(w){return t.some(function(x){return x.indexOf(w)===0})});li.style.display=m?'':'none';if(m)c++});p.style.display=c?'':'none';if(on&&c)p.querySelectorAll('.r').forEach(function(x){x.classList.add('on')});found+=c});
+    if(on&&!found){empty.innerHTML=drinks(ws)?'Напитки выбирают на месте, у бара. Загляните на Взлётную, 81.':'Такого блюда сейчас нет. Уточнить можно по телефону: <a href="tel:+73852580707">+7 (3852) 58-07-07</a>.';empty.style.display='block'}else{empty.style.display='none'}
+    count.textContent=on?'Найдено позиций: '+found:'';drink.style.display=on?'none':'';chips.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));a.style.display=(on&&t.style.display==='none')?'none':''})});
+  var chips=[].slice.call(jump.querySelectorAll('a'));
+  if('IntersectionObserver' in window){var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)chips.forEach(function(a){var m=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('active',m);if(m){a.setAttribute('aria-current','true');if(jump.scrollWidth>jump.clientWidth)jump.scrollLeft=a.offsetLeft-jump.offsetLeft-16}else a.removeAttribute('aria-current')})})},{rootMargin:'-30% 0px -60% 0px'});pairs.forEach(function(p){spy.observe(p)})}
+  var els=document.querySelectorAll('.r');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('on')})}
+  try{var o={};new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Barnaul',weekday:'short',hour:'2-digit',hour12:false,minute:'2-digit'}).formatToParts(new Date()).forEach(function(p){o[p.type]=p.value});var h=+o.hour%24,now=h+(+o.minute)/60,d=o.weekday,prev={Mon:'Sun',Tue:'Mon',Wed:'Tue',Thu:'Wed',Fri:'Thu',Sat:'Fri',Sun:'Sat'}[d],late=d==='Fri'||d==='Sat',open=now>=12||(h<1&&(prev==='Fri'||prev==='Sat'));document.getElementById('open').textContent=open?'Сейчас открыто до '+((now>=12?late:true)?'01:00':'00:00')+'.':'Откроемся в 12:00.';if(/Mon|Tue|Wed|Thu/.test(d)&&now>=13&&now<17)document.getElementById('hhTitle').textContent='Счастливые часы идут сейчас'}catch(e){}
+})();
+</script>
+</body>
+</html>
