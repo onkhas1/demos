@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f0f0f">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://onkhas1.github.io/demos/kati-pet/">
 <meta property="og:image" content="https://onkhas1.github.io/demos/kati-pet/img/og.jpg">
@@ -19,7 +20,7 @@
 @font-face{font-family:Manrope;font-weight:200 800;font-display:swap;src:url(fonts/manrope-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20BD}
 :root{--bg:#0f0f0f;--surface:#1a1a1a;--ink:#fff;--muted:#a8a8a8;--accent:#dafa9c;--accent-ink:#0f0f0f;--paper:#fff;--tone:#f1f3ec;--m:clamp(16px,3vw,48px);--small:clamp(.875rem,.84rem + .1vw,.9375rem);--body:clamp(1.0625rem,1rem + .25vw,1.1875rem);--lead:clamp(1.25rem,1.1rem + .7vw,1.625rem);--head:clamp(2rem,1.3rem + 3.2vw,4rem);--ease:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px;scrollbar-color:#3a3a3a var(--bg);-webkit-text-size-adjust:100%}
+html{color-scheme:dark;scroll-behavior:smooth;scroll-padding-top:84px;scrollbar-color:#3a3a3a var(--bg);-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/1.5 Manrope,system-ui,sans-serif;overflow-x:clip;font-variant-numeric:tabular-nums}
 ::selection{background:var(--accent);color:var(--accent-ink)}
 img{display:block;max-width:100%}
@@ -33,6 +34,9 @@ h2{font-size:var(--head);line-height:1.05}
 .bar nav{display:flex;gap:clamp(16px,2.4vw,36px)}
 .bar nav a{text-decoration:none;font-weight:500}
 .bar nav a:hover{color:var(--accent)}
+.skip{position:absolute;left:var(--m);top:-80px;z-index:30;background:var(--accent);color:var(--accent-ink);padding:12px 20px;border-radius:999px;font-weight:700}
+.skip:focus{top:8px}
+.btn,.tab{touch-action:manipulation}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border:0;font-family:inherit;font-size:inherit;cursor:pointer;transition:transform .35s var(--ease),background-color .2s}
 .btn:hover{transform:translateY(-3px);background:#e9ffb9}
 .btn:active{transform:translateY(0) scale(.98)}
@@ -49,7 +53,7 @@ h1{font-size:clamp(2.75rem,6.8vw,6.6rem);line-height:1.02}
 .disc{position:absolute;z-index:1;top:50%;right:calc(-1 * clamp(120px,14vw,260px));width:min(112vh,68vw);aspect-ratio:1;translate:0 -50%;border-radius:50%;overflow:hidden;background:#40464f;animation:rise 1.2s var(--ease) both}
 .disc img{width:100%;height:100%;object-fit:cover;object-position:62% 45%;transform:translate3d(0,var(--py,0),0) scale(1.08);will-change:transform}
 @keyframes rise{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
-.light{background:var(--paper);color:var(--accent-ink)}
+.light{color-scheme:light;background:var(--paper);color:var(--accent-ink)}
 .prices{padding:clamp(72px,12vh,150px) var(--m)}
 .prices-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(32px,5vh,56px)}
 .prices-head p{margin:0;font-size:var(--lead);line-height:1.35}
@@ -107,7 +111,8 @@ footer{padding:0 var(--m) 28px;overflow:hidden}
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
-<header class="bar"><a class="mark" href="#top">Кэти Пэт</a><nav aria-label="Разделы"><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contact">Контакты</a></nav><a class="btn small" href="#contact">Записаться</a></header>
+<a class="skip" href="#prices">Перейти к ценам</a>
+<header class="bar"><a class="mark" href="#top" translate="no">Кэти Пэт</a><nav aria-label="Разделы"><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contact">Контакты</a></nav><a class="btn small" href="#contact">Записаться</a></header>
 <main id="top">
 <section class="hero">
   <div class="copy">
@@ -115,13 +120,13 @@ footer{padding:0 var(--m) 28px;overflow:hidden}
     <p class="sub">Собаки и кошки, от 1 400 ₽. Переулок Ядринцева, 95.</p>
     <div class="actions"><a class="btn" href="#prices">Узнать цену для своей породы</a><a class="btn alt" href="tel:+79609665951">+7 960 966-59-51</a></div>
   </div>
-  <div class="disc"><img src="img/pom.webp" width="1500" height="994" alt="Рыжий пушистый шпиц в профиль"></div>
+  <div class="disc"><img src="img/pom.webp" fetchpriority="high" width="1500" height="994" alt="Рыжий пушистый шпиц в профиль"></div>
   <p class="proof">5,0 в 2ГИС, <a href="https://2gis.ru/barnaul/firm/70000001100354708/tab/reviews">515 отзывов</a></p>
 </section>
 <section class="prices light" id="prices">
   <div class="prices-head">
     <h2 class="reveal">Цены по породам</h2>
-    <label class="find reveal" style="--d:80ms"><span>Найти свою породу</span><input id="q" type="search" placeholder="Например, шпиц" autocomplete="off"></label>
+    <label class="find reveal" style="--d:80ms"><span>Найти свою породу</span><input id="q" name="breed" type="search" placeholder="Например, шпиц…" autocomplete="off"></label>
   </div>
   <div class="price-grid">
     <div class="reveal" style="--d:140ms">
